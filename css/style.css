@@ -30,7 +30,6 @@ nav {
 .filter-bar ul .list-group-item:hover {
   background-color: red;
   color: white;
-  padding: 3rem;
 }
 
 .filter-bar .newPost {
