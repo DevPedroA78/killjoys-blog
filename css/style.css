@@ -1,0 +1,29 @@
+body {
+  background-image: url(images/background.jpg);
+  background-size: cover;
+}
+
+nav {
+  background-image: url(images/logo.webp);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  height: 250px;
+}
+
+.fixed-top {
+  font-family: 'Bangers';
+  font-size: large;
+}
+
+.fixed-top ul .list-group-item {
+  background-color: yellow;
+  border: 3px solid black;
+}
+
+.fixed-top p {
+  left: 24px;
+  top: 39px;
+  color: black;
+}
+/*# sourceMappingURL=style.css.map */
