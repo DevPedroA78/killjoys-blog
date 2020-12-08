@@ -12,10 +12,10 @@ var firstSlide = `
 var firstNumberSlide = `<li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>`
 
 //Listener Filtros
-$(".listFilters li").click( event => {
+$(".listFilters li").click(event => {
     let value = $(event.target).data("filter")
     console.log(value)
-    getTheJson (value)
+    getTheJson(value)
 })
 
 
@@ -26,10 +26,12 @@ $("input, textarea, select").change(event => {
     newPost[property] = value
 })
 
+//$("#detailModal .detail-cover").css({"background-image":`url(${picUrl})`})
+//$(".text-block").text(`Es necesario llenar todos los campos para continuar`)
 //Listener boton NewPost
 $("#newPost").click(() => {
     newPost["starred"] = $("#star:checked").val() ? true : false
-    console.log("NewPost")
+    console.log(newPost)
     crudTheJson(newPost, "POST")
     $("#nuevoPost").modal("hide")
 })
@@ -42,7 +44,7 @@ const getTheJson = criteria => {
         method: "GET",
         success: data => {
             allPosts = data
-            fillDataToCards(data,criteria)
+            fillDataToCards(data, criteria)
             starredSlides(data)
         },
         error: "",
@@ -79,12 +81,12 @@ const crudTheJson = (theEntry, action) => {
 }
 
 //Funcion que llena Cards en HTML
-const fillDataToCards = (theJson,criteria) => {
+const fillDataToCards = (theJson, criteria) => {
     $(jsonElement).empty()
     for (key in theJson) {
         let object = theJson[key]
         let { date, title, text, author, imageURL, category } = object
-        if(category === criteria || criteria === "All"){
+        if (category === criteria || criteria === "All") {
             let newCard = `
                 <div class="card mb-3 m-1 d-flex flex-column flex-md-row bg-transparent border-0" data-entry-key=${key}>
                     <div class="col-12 col-md-4 bg-light myborder mr-1 mb-1 rounded-0">  
@@ -101,8 +103,8 @@ const fillDataToCards = (theJson,criteria) => {
                 </div>
                 `
             $(jsonElement).append(newCard)
-            }
         }
+    }
     $(jsonElement).html() === "" ? $(jsonElement).html(`<p class="p-3 font-weight-bold w-100">¡Oops! Aún no hay entradas en la categoria seleccionada.</p>`) : addBtnDeleteListener()
 }
 
@@ -120,12 +122,12 @@ const addBtnDeleteListener = () => {
 
 //Listener de cards
 const addCardsListener = () => {
-    $("#jsonElement .card").click( event => {
+    $("#jsonElement .card").click(event => {
         let entryKey = $(event.target).closest(".card").data("entry-key")
         let theObject = allPosts[entryKey]
         let { date, title, text, author, imageURL, category } = theObject
         $("#thePost .modal-title").text(title)
-        $("#thePost .modal-body .img-post").attr( {src: imageURL})
+        $("#thePost .modal-body .img-post").attr({ src: imageURL })
         $("#thePost .modal-body .author").text(author)
         $("#thePost .modal-body .text-post").text(text)
         $("#thePost .modal-body .date").text(date)
@@ -136,7 +138,7 @@ const addCardsListener = () => {
 
 //Llena destacados
 const starredSlides = theJson => {
-    $(idSlideElement+",#slideNumber").empty()
+    $(idSlideElement + ",#slideNumber").empty()
     $(idSlideElement).append(firstSlide)
     $("#slideNumber").append(firstNumberSlide)
     let i = 1;
