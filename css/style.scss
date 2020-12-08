@@ -46,3 +46,15 @@ h5{
     border: 3px solid black;
 }
 
+.modal{
+    background-image: url(images/boom.png);
+    background-repeat: no-repeat;
+    background-size: 200px;
+    background-position: bottom;
+    font-family: 'Bangers';
+    .modal-content{
+        background-image: url(images/back3.png);
+        background-size: cover;
+        background-position: center;
+    }
+}
