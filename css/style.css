@@ -1,6 +1,10 @@
-body {
+.cherry {
   background-image: url(images/background.jpg);
   background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: -1;
 }
 
 nav {
@@ -55,24 +59,24 @@ h5 {
   border: 3px solid black;
 }
 
-.modal {
+#nuevoPost {
   background-image: url(images/boom.png);
   background-repeat: no-repeat;
   background-size: 200px;
   background-position: bottom;
 }
 
-.modal h5, .modal label {
+#nuevoPost h5, #nuevoPost label {
   font-family: 'Bangers';
 }
 
-.modal .modal-content {
+#nuevoPost .modal-content {
   background-image: url(images/back3.png);
   background-size: cover;
   background-position: center;
 }
 
-.modal .form-control:focus {
+#nuevoPost .form-control:focus {
   -webkit-box-shadow: none;
           box-shadow: none;
 }

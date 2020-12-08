@@ -1,6 +1,10 @@
-body{
+.cherry{
     background-image: url(images/background.jpg);
     background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: -1;
 }
 
 nav{
@@ -49,24 +53,24 @@ h5{
     border: 3px solid black;
 }
 
-.modal{
-    background-image: url(images/boom.png);
-    background-repeat: no-repeat;
-    background-size: 200px;
-    background-position: bottom;
-    h5, label{
-        font-family: 'Bangers';
-    }
-    .modal-content{
-        background-image: url(images/back3.png);
-        background-size: cover;
-        background-position: center;
-    }
-    .form-control{
-        &:focus {
-            box-shadow: none;
+#nuevoPost{
+        background-image: url(images/boom.png);
+        background-repeat: no-repeat;
+        background-size: 200px;
+        background-position: bottom;
+        h5, label{
+            font-family: 'Bangers';
         }
-    }
+        .modal-content{
+            background-image: url(images/back3.png);
+            background-size: cover;
+            background-position: center;
+        }
+        .form-control{
+            &:focus {
+                box-shadow: none;
+            }
+        }
 }
 
 .card{
@@ -79,6 +83,7 @@ h5{
 .carousel-inner{
     height: 30vh;
 }
+
 
 
 /*

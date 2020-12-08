@@ -123,35 +123,19 @@ const addCardsListener = () => {
         let entryKey = $(event.target).closest(".card").data("entry-key")
         let theObject = allPosts[entryKey]
         let { date, title, text, author, imageURL, category } = theObject
+        $("#thePost .modal-title").text(title)
+        $("#thePost .modal-body .img-post").attr( {src: imageURL})
+        $("#thePost .modal-body .author").text(author)
+        $("#thePost .modal-body .text-post").text(text)
+        $("#thePost .modal-body .date").text(date)
+        $("#thePost .modal-body .category").text(category)
+        $("#thePost").modal("show")
     })
 }
 
-
-/*
-const addCardListener = () => {
-    $(".general-posts-wrapper .card").click( event => {
-        let entryKey = $(event.target).closest(".card").data("entry-key")
-        console.log( event.target )
-        console.log( entryKey )
-        let selectedPost = postsCollection[entryKey]
-        console.log( selectedPost )
-
-        let { title, text, author, date, picUrl } = selectedPost;
-        $("#detailModal .detail-cover").css({"background-image":`url(${picUrl})`})
-        $("#detailModal .post-title").text(title)
-        $("#detailModal .post-text").text(text)
-        $("#detailModal .author").text(author)
-        $("#detailModal .date").text(date)
-
-        $("#detailModal").modal("show")
-    })
-}*/
-
-
 //Llena destacados
 const starredSlides = theJson => {
-    $(idSlideElement).empty()
-    $("#slideNumber").empty()
+    $(idSlideElement+",#slideNumber").empty()
     $(idSlideElement).append(firstSlide)
     $("#slideNumber").append(firstNumberSlide)
     let i = 1;
