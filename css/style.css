@@ -11,30 +11,38 @@ nav {
   height: 250px;
 }
 
-.fixed-top {
+.filter-bar {
   font-family: 'Bangers';
-  font-size: large;
 }
 
-.fixed-top ul .list-group-item {
+.filter-bar ul .list-group-item {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   background-color: yellow;
   border: 3px solid black;
-  margin-left: 1px;
+  cursor: pointer;
 }
 
-.fixed-top ul .list-group-item:hover {
+.filter-bar ul .list-group-item:hover {
   background-color: red;
+  color: white;
+  padding: 3rem;
 }
 
-.fixed-top .newPost:hover {
+.filter-bar .newPost {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.filter-bar .newPost:hover {
   -webkit-filter: invert(100%);
           filter: invert(100%);
   color: white;
 }
 
-.fixed-top .newPost p {
-  left: 24px;
-  top: 39px;
+.filter-bar .newPost p {
+  left: 25px;
+  top: 41px;
   color: black;
 }
 
@@ -52,6 +60,9 @@ h5 {
   background-repeat: no-repeat;
   background-size: 200px;
   background-position: bottom;
+}
+
+.modal h5, .modal label {
   font-family: 'Bangers';
 }
 
@@ -60,4 +71,59 @@ h5 {
   background-size: cover;
   background-position: center;
 }
+
+.modal .form-control:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.card button {
+  bottom: 0%;
+  right: 0%;
+}
+
+.carousel-inner {
+  height: 30vh;
+}
+
+/*
+.card{
+    .post-img{
+        width:100%;
+        background-size:cover;
+        background-position: center;
+        &:after{
+            content:"";
+            padding-top:100%;
+            display: block;
+        }
+    }
+}
+
+.filter-list{
+    li{
+        transition:all .5s ease;
+        cursor:pointer;
+        &:hover{
+            
+            background-color:#333;
+            color:white;
+        }
+    }
+}
+
+#detailModal{
+    .detail-cover{
+        width:100%;
+        background-size:cover;
+        background-position:center;
+        background-image:url("https://picsum.photos/id/237/1000/800");
+        &:after{
+            content:"";
+            padding-top:50%;
+            display:block;
+        }
+    }
+}
+*/
 /*# sourceMappingURL=style.css.map */
