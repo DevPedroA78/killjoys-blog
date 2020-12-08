@@ -18,17 +18,31 @@ nav{
         .list-group-item{
             background-color: yellow;
             border: 3px solid black;
+            margin-left: 1px;
+            &:hover{
+                background-color: red;
+            }
         }
     }
-    p{
-        left: 24px;
-        top: 39px;
-        color: black;
+    .newPost{
+        &:hover{
+            filter: invert(100%);
+            color: white;
+        }
+        p{
+            left: 24px;
+            top: 39px;
+            color: black;
+        }
     }
 }
 
 h5{
     font-family: 'Bebas Neue';
     text-shadow: 1px 1px 2px black; 
+}
+
+.myborder{
+    border: 3px solid black;
 }
 

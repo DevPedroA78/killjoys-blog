@@ -19,9 +19,20 @@ nav {
 .fixed-top ul .list-group-item {
   background-color: yellow;
   border: 3px solid black;
+  margin-left: 1px;
 }
 
-.fixed-top p {
+.fixed-top ul .list-group-item:hover {
+  background-color: red;
+}
+
+.fixed-top .newPost:hover {
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+  color: white;
+}
+
+.fixed-top .newPost p {
   left: 24px;
   top: 39px;
   color: black;
@@ -30,5 +41,9 @@ nav {
 h5 {
   font-family: 'Bebas Neue';
   text-shadow: 1px 1px 2px black;
+}
+
+.myborder {
+  border: 3px solid black;
 }
 /*# sourceMappingURL=style.css.map */
