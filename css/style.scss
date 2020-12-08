@@ -12,7 +12,7 @@ nav{
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    height: 250px;
+    height: 200px;
 }
 
 .filter-bar{
@@ -32,6 +32,7 @@ nav{
     }
     .newPost{
         transition: all 0.3s ease;
+        cursor:pointer;
         &:hover{
             filter: invert(100%);
             color: white;
@@ -54,6 +55,7 @@ h5{
 }
 
 #nuevoPost{
+        transition: all 0.3s ease;
         background-image: url(images/boom.png);
         background-repeat: no-repeat;
         background-size: 200px;

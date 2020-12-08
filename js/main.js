@@ -31,6 +31,7 @@ $("#newPost").click(() => {
     newPost["starred"] = $("#star:checked").val() ? true : false
     console.log("NewPost")
     crudTheJson(newPost, "POST")
+    $("#nuevoPost").modal("hide")
 })
 
 //Request de GET a AJAX
