@@ -89,13 +89,13 @@ const fillDataToCards = (theJson, criteria) => {
         if (category === criteria || criteria === "All") {
             let newCard = `
                 <div class="card mb-3 m-1 d-flex flex-column flex-md-row bg-transparent border-0" data-entry-key=${key}>
-                    <div class="col-12 col-md-4 bg-light myborder mr-1 mb-1 rounded-0">  
+                    <div class="col-12 col-md-4 myborder rounded-0 container-img">  
                         <img src="${imageURL}" class="card-img w-100" alt="...">
                     </div>  
                     <div class="col-12 col-md-8 card-body bg-light rounded-0 myborder mr-1 p-3 position-relative">
                         <h5 class="card-title">${title}</h5>
                         <p class="card-text"><small>${author}</small></p>
-                        <p class="card-text text-wrap">${text}</p>
+                        <p class="card-text text-wrap">${text.slice(0,200)+"..."}</p>
                         <p class="card-text"><small class="text-muted">${date}</small></p>
                         <p class="card-text"><small class="text-muted">${category}</small></p>
                         <button type="button" class="btn btn-danger btn-sm btn-delete position-absolute" data-entry-key=${key}>-</button>
@@ -151,7 +151,7 @@ const starredSlides = theJson => {
                     <img src="${imageURL}" class="d-block w-100 h-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>${title}</h5>
-                        <p>${text}</p>
+                        <p>${text.slice(0,200)+"..."}</p>
                     </div>
                 </div>
                 `

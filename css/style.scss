@@ -12,7 +12,7 @@ nav{
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    height: 200px;
+    height: 20vh;
 }
 
 .filter-bar{
@@ -26,7 +26,14 @@ nav{
             &:hover{
                 background-color: red;
                 color: white;
-
+            }
+            &:first-child{
+                background-color:white;
+                color:black;
+                &:hover{
+                    background-color:black;
+                    color: white;
+                }
             }
         }
     }
@@ -76,6 +83,11 @@ h5{
 }
 
 .card{
+    .container-img{
+        background-image: url(images/back2.png);
+        background-size: cover;
+        background-position: center;
+    }
     button{
         bottom: 0%;
         right: 0%;
@@ -130,3 +142,13 @@ h5{
     }
 }
 */
+
+
+@media (min-width: 768px) {
+    .carousel-inner{
+        height: 55vh;
+    }
+    nav{
+        height: 35vh;
+    }
+}
