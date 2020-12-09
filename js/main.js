@@ -151,7 +151,7 @@ const starredSlides = theJson => {
                     <img src="${imageURL}" class="d-block w-100 h-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>${title}</h5>
-                        <p>${text.slice(0,200)+"..."}</p>
+                        <p>${text.slice(0,400)+"..."}</p>
                     </div>
                 </div>
                 `
